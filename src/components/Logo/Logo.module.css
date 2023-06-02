@@ -1,0 +1,31 @@
+.logo {
+  font-family: var(--family-poppins);
+  font-weight: 700;
+  font-size: var(--fz-4);
+  line-height: 1.2;
+  color: rgb(var(--color-green-light));
+  -webkit-text-stroke: 0.025em rgb(var(--color-primary));
+  text-shadow: -0.075em 0.075em 0px rgb(var(--color-primary));
+
+  position: relative;
+  top: 0;
+  left: 0;
+
+  transition: color var(--transition), text-shadow var(--transition), top var(--transition),
+    left var(--transition);
+}
+
+@media (any-hover: hover) {
+  .logo:hover {
+    color: rgb(var(--color-green-light-hover));
+    text-shadow: -0.0375em 0.0375em 0px rgb(var(--color-primary));
+
+    top: 0.0375em;
+    left: -0.0375em;
+  }
+}
+
+.logo:focus-visible {
+  outline: 0.05em solid rgb(var(--color-green-dark));
+  border-radius: 0.5em;
+}

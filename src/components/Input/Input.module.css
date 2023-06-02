@@ -1,0 +1,61 @@
+.input {
+  font-size: var(--fz-1);
+  line-height: 1;
+  color: var(--color-white);
+  font-family: inherit;
+  letter-spacing: 0.1em;
+
+  background-color: rgb(var(--color-green-dark));
+  border: 0.05em solid rgb(var(--color-primary));
+
+  border-radius: 1.25em;
+  box-shadow: 0px 0.25em 0px rgb(var(--color-primary));
+
+  min-height: 2.5em;
+  padding: 0.65em 1em;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  transition: background-color var(--transition);
+}
+
+.input::placeholder {
+  color: var(--color-light);
+}
+
+@media (any-hover: hover) {
+  .input:hover {
+    background-color: rgba(var(--color-green-dark), 0.9);
+  }
+}
+
+.input:focus {
+  outline: none;
+  background-color: rgba(var(--color-primary), 0.9);
+}
+
+.textarea {
+  composes: input;
+  resize: vertical;
+  min-height: 5em;
+  background-color: rgb(var(--color-primary));
+  border: 0.05em solid rgb(var(--color-green-dark));
+  box-shadow: 0px 0.25em 0px rgb(var(--color-green-dark));
+}
+
+@media (any-hover: hover) {
+  .textarea:hover {
+    background-color: rgba(var(--color-primary), 0.9);
+  }
+}
+
+.textarea:focus {
+  outline: none;
+  background-color: rgba(var(--color-green-dark), 0.9);
+}
+
+.error {
+  font-size: var(--fz-1);
+  font-weight: 600;
+  color: var(--color-error);
+}

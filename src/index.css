@@ -1,0 +1,45 @@
+:root {
+  --family-raleway: 'Raleway', sans-serif;
+  --family-poppins: 'Poppins', sans-serif;
+
+  --color-primary: 25, 26, 25; /* Dark */
+  --color-white: #ffffff;
+  --color-light: #d8e9a8;
+  --color-green-dark: 30, 81, 40; /* Dark green */
+  --color-green-light: 78, 159, 61; /* Light green */
+  --color-green-light-hover: 89, 186, 70;
+  --color-error: #ff0000;
+
+  --fz-1: 1.25rem; /* 20px */
+  --fz-2: 1.5rem; /* 24px */
+  --fz-3: 2rem; /* 32px */
+  --fz-4: 2.5rem; /* 40px */
+
+  --spacing-10: 0.625rem;
+  --spacing-20: 2rem;
+  --spacing-40: 2.5rem;
+
+  --transition: 150ms ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: var(--family-raleway);
+  font-weight: 500;
+  color: rgb(var(--color-primary));
+}
+
+body {
+  background-color: var(--color-light);
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
