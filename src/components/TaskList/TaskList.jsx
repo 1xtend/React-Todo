@@ -17,7 +17,7 @@ function TaskList({ tasks, onRemove, onCheck }) {
           />
         ))
       ) : (
-        <p>Missing tasks</p>
+        <p className={styles.alert}>Missing tasks</p>
       )}
     </div>
   );

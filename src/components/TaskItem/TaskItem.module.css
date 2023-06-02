@@ -77,6 +77,10 @@
 
 @media (max-width: 479.98px) {
   .item {
-    padding: var(--spacing-10);
+    padding: var(--spacing-16);
+  }
+
+  .top:not(:last-child) {
+    margin-bottom: var(--spacing-16);
   }
 }

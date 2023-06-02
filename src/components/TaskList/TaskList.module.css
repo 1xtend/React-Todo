@@ -4,6 +4,11 @@
   gap: var(--spacing-20);
 }
 
+.alert {
+  font-size: var(--fz-1);
+  color: rgba(var(--color-primary), 0.7);
+}
+
 @media (max-width: 767.98px) {
   .grid {
     grid-template-columns: auto;
