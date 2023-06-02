@@ -31,7 +31,7 @@
 
 .input:focus {
   outline: none;
-  background-color: rgba(var(--color-primary), 0.9);
+  background-color: rgba(var(--color-green-dark), 0.9);
 }
 
 .textarea {
@@ -51,7 +51,7 @@
 
 .textarea:focus {
   outline: none;
-  background-color: rgba(var(--color-green-dark), 0.9);
+  background-color: rgba(var(--color-primary), 0.9);
 }
 
 .error {

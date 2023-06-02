@@ -6,6 +6,7 @@ import Header from './components/Header/Header';
 import Section from './components/Section/Section';
 import TaskForm from './components/TaskForm/TaskForm';
 import TaskList from './components/TaskList/TaskList';
+import Search from './components/Search/Search';
 
 function initTasks() {
   const tasks = localStorage.getItem('tasks');
@@ -59,6 +60,8 @@ function App() {
     );
   }
 
+  const filteredTasks = tasks.filter((task) => task.text.toLowerCase().includes(query));
+
   return (
     <Container>
       <Header></Header>
@@ -67,7 +70,9 @@ function App() {
           <TaskForm onCreate={createTask} />
         </Section>
         <Section title="Your Tasks">
-          <TaskList tasks={tasks} onRemove={removeTask} onCheck={checkTask} />
+          <Search value={query} setQuery={setQuery} />
+
+          <TaskList tasks={filteredTasks} onRemove={removeTask} onCheck={checkTask} />
         </Section>
       </main>
     </Container>
