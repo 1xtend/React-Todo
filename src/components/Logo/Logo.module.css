@@ -27,6 +27,6 @@
 }
 
 .logo:focus-visible {
-  outline: 0.05em solid rgb(var(--color-green-dark));
+  outline: 0.05em solid rgb(var(--color-focus));
   border-radius: 0.5em;
 }

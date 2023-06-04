@@ -32,6 +32,10 @@
   opacity: 0;
 }
 
+.label input:focus-visible ~ .checkmark {
+  border: 2px solid rgb(var(--color-focus));
+}
+
 .checkmark {
   width: 18px;
   height: 18px;

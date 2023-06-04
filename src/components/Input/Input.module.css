@@ -32,6 +32,7 @@
 .input:focus {
   outline: none;
   background-color: rgba(var(--color-green-dark), 0.9);
+  box-shadow: 0px 0.25em 0px rgb(var(--color-focus));
 }
 
 .textarea {
