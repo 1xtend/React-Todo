@@ -38,6 +38,28 @@ body {
   color: rgb(var(--color-primary));
 }
 
+html {
+  scrollbar-width: 10px;
+  scrollbar-color: rgb(var(--color-green-dark)) rgb(var(--color-primary));
+}
+
+html::-webkit-scrollbar {
+  width: 10px;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: rgb(var(--color-primary));
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: rgb(var(--color-green-dark));
+  transition: background-color var(--transition);
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(var(--color-green-light));
+}
+
 body {
   background-color: var(--color-light);
 }
@@ -45,4 +67,16 @@ body {
 a,
 a:visited {
   text-decoration: none;
+}
+
+.wrapper {
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1 0 auto;
 }

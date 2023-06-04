@@ -7,6 +7,7 @@ import Section from './components/Section/Section';
 import TaskForm from './components/TaskForm/TaskForm';
 import TaskList from './components/TaskList/TaskList';
 import Search from './components/Search/Search';
+import Footer from './components/Footer/Footer';
 
 function initTasks() {
   const tasks = localStorage.getItem('tasks');
@@ -60,22 +61,29 @@ function App() {
     );
   }
 
-  const filteredTasks = tasks.filter((task) => task.text.toLowerCase().includes(query));
+  const filteredTasks = tasks.filter((task) =>
+    task.text.toLowerCase().includes(query.toLowerCase())
+  );
 
   return (
-    <Container>
-      <Header></Header>
-      <main>
-        <Section>
-          <TaskForm onCreate={createTask} />
-        </Section>
-        <Section title="Your Tasks">
-          <Search value={query} setQuery={setQuery} />
+    <div className="wrapper">
+      <Header />
 
-          <TaskList tasks={filteredTasks} onRemove={removeTask} onCheck={checkTask} />
-        </Section>
+      <main className="main">
+        <Container>
+          <Section>
+            <TaskForm onCreate={createTask} />
+          </Section>
+          <Section title="Your Tasks">
+            <Search value={query} setQuery={setQuery} />
+
+            <TaskList tasks={filteredTasks} onRemove={removeTask} onCheck={checkTask} />
+          </Section>
+        </Container>
       </main>
-    </Container>
+
+      <Footer />
+    </div>
   );
 }
 export default App;

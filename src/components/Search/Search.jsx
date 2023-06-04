@@ -1,13 +1,14 @@
 import Input from '../Input/Input';
 import styles from './Search.module.css';
 
-function Search({ setQuery }) {
+function Search({ setQuery, value }) {
   return (
     <div className={styles.content}>
       <Input
         name="searchInput"
         placeholder="Search task"
-        onChange={(e) => setQuery(e.target.value.toLowerCase().trim())}
+        value={value}
+        onChange={(e) => setQuery(e.target.value)}
       />
     </div>
   );
