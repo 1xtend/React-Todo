@@ -7,7 +7,6 @@ import Section from './components/Section/Section';
 import TaskForm from './components/TaskForm/TaskForm';
 import TaskList from './components/TaskList/TaskList';
 import Search from './components/Search/Search';
-import Footer from './components/Footer/Footer';
 
 function initTasks() {
   const tasks = localStorage.getItem('tasks');
@@ -81,8 +80,6 @@ function App() {
           </Section>
         </Container>
       </main>
-
-      <Footer />
     </div>
   );
 }

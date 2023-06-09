@@ -11,6 +11,7 @@
   --color-error: #ff0000;
 
   --color-focus: 232, 106, 51;
+  --color-bg: #e5f9db;
 
   --fz-1: 1.25rem; /* 20px */
   --fz-2: 1.5rem; /* 24px */
@@ -61,7 +62,7 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 body {
-  background-color: var(--color-light);
+  background-color: var(--color-bg);
 }
 
 a,
